@@ -14,7 +14,7 @@ const MyModel = mongoose.model("users", BlogPost);
 const express = require("express");
 const app = express();
 //to accept data in form type and not in json format
-app.use(express.urlencoded);
+app.use(express.urlencoded());
 app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
@@ -24,7 +24,7 @@ app.get("/login", (req, res) => {
 app.get("/users", async (req, res) => {
   try {
     const result = await MyModel.find();
-    res.render("users.ejs", { data: result });
+    res.render("users.ejs", { "data": result });
   } catch (err) {
     res.send("ERROR : " + err);
   }
