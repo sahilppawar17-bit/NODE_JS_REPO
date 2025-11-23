@@ -14,3 +14,5 @@ git config --global users.name "sahil"
 git config --global users.email "sahil@gmail.in"
 
 git remote add origin https://github.com/sahilppawar17-bit/NodeJS-login-and-Register-.git
+
+git config --global user.email "sahil@gmail.in"
