@@ -1,0 +1,23 @@
+<%- include('menu.ejs'); %>
+<div class="container mt-4">
+  <h2 class="mb-3">User Details</h2>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(function(user){ %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.password %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
